@@ -1,0 +1,354 @@
+<!DOCTYPE html> <html>
+<head>
+    <meta charset="UTF-8">
+    <title>О компании</title>
+    <link rel="icon" href="1112.ico">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Cutive+Mono'><link rel="stylesheet" href="./style.css">
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .section {
+  max-height: 950px;
+  overflow-y: auto;
+  direction: ltr;
+  scrollbar-color: #d4aa70 #e4e4e4;
+  scrollbar-width: thin;
+}
+
+.section::-webkit-scrollbar {
+  width: 20px;
+}
+
+.section::-webkit-scrollbar-track {
+  background-color: #e4e4e4;
+  border-radius: 100px;
+}
+
+.section::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background-image: linear-gradient(180deg, #2a0046 0%, #bd77ff 99%);
+  box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+}
+    html {
+        font-size: 70%;
+        font-family: sans-serif;
+    }
+    
+    li {
+        list-style-type: none;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    .header{
+        border-bottom: 1px solid #d3c0ff;
+        position: relative;
+    }
+    
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #151617;
+        padding: 1rem 1.5rem;
+    }
+    
+    .hamburger {
+        display: none;
+    }
+    
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: white;
+    }
+    
+    .nav-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .nav-item {
+        margin-left: 3rem;
+    }
+    
+    .nav-link{
+        font-size: 19px;
+        color: white;
+    }
+    
+    .nav-link:hover:not(.actives){
+        color: #ffffff;
+        padding: 15px 15px 15px 15px;
+        border-radius: 5px;
+    }
+    
+    .nav-logo {
+        font-size: 30px;
+        font-weight: 500;
+        color: white;
+        padding: 5px 5px 5px 5px;
+        border-radius: 5px;
+        transform-style: preserve-3d;
+    }
+    .nav-logo:hover {
+        transform-origin: center bottom;
+	transform: rotateX(-90deg) translateY(100%);
+    transition: all 1s ease;
+    }
+    .nav-logo:after {
+	top: -100%;
+	left: 0;
+	width: 280%;
+	position: absolute;
+	background: #3c005f;
+	border-radius: 5px;
+	content: 'Вернуться на главную';
+	transform-origin: left bottom;
+	transform: rotateX(90deg);
+    transition: all 2s ease;
+    padding: 5px 5px 5px 5px;
+    }   
+    
+    @media only screen and (max-width: 800px) {
+        .nav-menu {
+            position: fixed;
+            left: -100%;
+            top: 5rem;
+            flex-direction: column;
+            background-color: #3d3d3d;
+            width: 100%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            text-align: center;
+            transition: 0.3s;
+    
+        }
+    
+        .nav-menu.actives {
+            left: 0;
+        }
+    
+        .nav-item {
+            margin: 2.5rem 0;
+    
+        }
+    
+        .hamburger {
+            display: block;
+            cursor: pointer;
+        }
+    
+        .hamburger.actives .bar:nth-child(2) {
+            opacity: 0;
+        }
+    
+        .hamburger.actives .bar:nth-child(1) {
+            -webkit-transform: translateY(8px) rotate(45deg);
+            transform: translateY(8px) rotate(45deg);
+        }
+    
+        .hamburger.actives .bar:nth-child(3) {
+            -webkit-transform: translateY(-8px) rotate(-45deg);
+            transform: translateY(-8px) rotate(-45deg);
+        }
+    }
+        table {
+        border-collapse: collapse;
+        border: 2px solid rgba(0, 0, 0, 0.479);
+        letter-spacing: 1px;
+        font-size: large;
+        margin: 1em;
+        padding: 1em;
+        }
+        td, th {
+        border: 1px solid rgba(0, 0, 0, 0.459);
+        padding: 5px 10px;
+        }
+        th {
+        background-color: rgba(119, 0, 255, 0.568);
+        }
+        td {
+        text-align: center;
+        }
+        tr:nth-child(even) td {
+        background-color: rgba(119, 0, 255, 0.493);
+        }
+        tr:nth-child(odd) td {
+        background-color: rgba(95, 6, 167, 0.507);
+        }
+        div {
+            padding: 10px;
+            text-shadow: rgb(0, 0, 0) 1px 1px 0, rgb(0, 0, 0) -1px -1px 0, 
+                 rgb(0, 0, 0) -1px 1px 0, rgb(0, 0, 0) 1px -1px 0;
+            font-size: large;
+        }
+        figure {
+            padding: 1em;
+        }
+
+        hr {
+            margin: 2em;
+        }
+
+        p {
+            margin: 0.5em;
+        }
+        h2 {
+            margin: 1em;
+        }
+        h3 {
+            margin: 1em;
+        }
+        h4 {
+            margin: 1em;
+        }
+        li a.active {
+            background-color: #721ba5;
+            color: white;
+            padding: 15px 120px 10px 40px;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #555;
+            color: rgb(255, 255, 255);
+            padding: 15px 120px 15px 15px;
+            border-radius: 5px;
+        }
+
+        .box {
+            position: fixed;
+            top: 0px;
+        }
+        .boh {
+            position: fixed;
+            bottom: 0px;
+        }
+        a:hover {
+            color: #fff;
+            background: #555;
+        }
+        ul:before {
+        content:'';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: rgba(162, 0, 255, 0.192);
+        border-radius: 5px;
+        transition: all 2s ease;
+        z-index: -1;
+        }
+        ul:hover:before {
+            width: 100%;
+            z-index: -1;
+        }
+    @import url('https://fonts.googleapis.com/css?family=Roboto:100');
+
+    body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    background: #18003600 url(49.png) no-repeat top center / cover;
+    position: relative;
+    overflow-y: scroll;
+    background-size: 100% 100%;
+    color: #fff;
+    }
+    h1 {
+    text-transform: uppercase;
+    }
+
+    [data-image-src] {
+    height: 600px;
+    width: 100%;
+    }
+        </style>
+</head>
+<body class="section">
+    <header class="header" style="z-index: 20;">
+        <nav class="navbar">
+            <a href="index.html" class="nav-logo">DOLINA</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="svasatsa.html" class="nav-link">Связаться</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Назад на основную страницу</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <script>
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+const navLink = document.querySelectorAll(".nav-link");
+
+hamburger.addEventListener("click", mobileMenu);
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+function mobileMenu() {
+    hamburger.classList.toggle("actives");
+    navMenu.classList.toggle("actives");
+}
+
+function closeMenu() {
+    hamburger.classList.remove("actives");
+    navMenu.classList.remove("actives");
+}
+    </script>
+<canvas id="myCanvas" style="padding: 50px;"></canvas>
+<script  src="./script.js"></script>
+<main>
+    <section class="mast">
+      <figure class="mast__bg"></figure>
+      <header class="mast__header" style="font-size: large;">
+        <h1 class="mast__title js-spanize">Я Данила Самарин</h1> 
+        <hr class="sep"/>
+        <p class="mast__text js-spanize">
+Являюсь молодым программистом.
+Имею опыт работы с html, css, java script, c#, pyton.
+Основатель этой компании, графический дизайнер.
+При создании сайтов фокусируюсь на дизайне интерфейса.</p>
+      </header>
+    </section>
+  </main>
+  <main>
+    <section class="mast" style="bottom: 10vh;">
+      <figure class="mast__bg"></figure>
+      <header class="mast__header" style="font-size: large;">
+        <p class="mast__text js-spanize">
+    Каждый проект, сделанный DOLINA, 
+    создается на пересечении дизайна и технологий, 
+    делая будущее — сегодня.</p>
+      </header>
+    </section>
+  </main>
+        <div style="margin-left:0%; margin-right:1%; margin-top:0%; padding: 15vh 0vh 0vh 0vh; height:1000px;">
+            <img src="50.png"; align="left";
+            width="810"
+            height="855">
+            <div>
+            <p style="padding: 15vh 0vh 0vh 0vh; font-size: xx-large;">
+                Мне 19 лет, на данный момент обучаюсь в университете.<br>Если вам нравится то, какие сайты я создаю.<br>И если вам нужен сайт с красивым дизайном.<br>Я определённо могу помочь с реализацией.
+            </p>
+        </div>
+        </div>
+        <div class="boh" style="display: block; color: #000; margin-right:97%; list-style-type: none; margin: 0; width: 3%; background-color: #221f1f; height: 45px; z-index: 22; border-radius: 0px 35px 0px 0px;"><a style="color: rgb(255, 255, 255); text-shadow: none; font-size: larger; text-align: center; margin: 0 0 0 0px; padding: 12px 10px 12px 10px; transition: 1s linear;" href="#">▲</a></div>
+        <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script><script  src="./script.js"></script>
+</body>
+</html>
